@@ -1,0 +1,22 @@
+{
+  "name": "whenthen",
+  "version": "0.0.1",
+  "description": "Holds function executions back until a certain requirement is met",
+  "keywords": [
+    "flow",
+    "flowcontrol",
+    "when"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maxkueng/whenthen.git"
+  },
+  "author": "Max Kueng <me@maxkueng.com> (http://maxkueng.com/)",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/maxkueng/whenthen/raw/master/LICENSE"
+    }
+  ]
+}
