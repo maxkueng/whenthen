@@ -11,7 +11,7 @@ function whenthen (when) {
 		results,
 		state = 'waiting';
 
-	function done () {
+	function resolve () {
 		state = 'ready';
 		results = arguments;
 		completeQueue();
@@ -23,11 +23,11 @@ function whenthen (when) {
 		}
 	}
 
-	function add (done) {
-		queue.push(done);
+	function add (task) {
+		queue.push(task);
 		if (state === 'waiting') {
 			state = 'running';
-			when(done);
+			when(resolve);
 		} else if (state == 'ready') {
 			completeQueue();
 		}
@@ -35,6 +35,6 @@ function whenthen (when) {
 
 	return {
 		do: add,
-		resolve: done
+		resolve: resolve
 	};
 }
